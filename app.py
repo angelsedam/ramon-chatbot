@@ -19,7 +19,7 @@ def on_input_change():
         res = requests.post(
             "https://dev-job-chatbot-ai-api-771147684746.us-central1.run.app/query",
             json={"prompt": prompt},
-            timeout=10
+            timeout=100
         )
         res.raise_for_status()
         result = res.json()
